@@ -1,5 +1,7 @@
 import os
 import sys
+import datetime
 
 sys.version_info
-print(os.name)
+time = datetime.datetime.now()
+print(time)
