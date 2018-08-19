@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainpage',
+    'mainpage',    
+    'ad_avto',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +71,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'blob.wsgi.application'
-
+APPEND_SLASH = False
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases

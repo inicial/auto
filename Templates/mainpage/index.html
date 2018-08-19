@@ -1,76 +1,12 @@
-{% load static %}
-<html lang="ru">
+{% extends 'layout.html' %}
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href='{% static "css/style.css" %}'>
-    <title>Avtoroom - Покупка, продажа авто мото техники, запчестей и акссесуаров. www.avtoroom.ru</title>
-</head>
-
-<body id="generic">
-    <!-- <nav class="navbar navbar-expand-xl navbar-dark  navbar-togglable  fixed-top">
-        <div class="container">
-            <a href="#" class="navbar-brand">AUTO^ROOM</a>
-            <div class="d-flex ml-auto"><a href="">Автомобили</a></div>
-            <div class="user_panel">
-                Привет, {{ name }}!
-            </div>
-            <hr/>
-        </div>
-    </nav> -->
-
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container"><a href="#" class="navbar-brand">AVTOR<sup>[OO]</sup>M</a>
-            <div class="d-flex ml-auto">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#globalNavbar" aria-controls="globalNavbar"
-                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            </div>
-            <div class="collapse navbar-collapse" id="globalNavbar">
-                <form class="form-inline form-navbar my-2 my-lg-0 order-2" action="">
-                    <input class="form-control" name="s" type="text" placeholder="Поиск">
-                </form>
-                <ul class="navbar-nav mr-auto order-1">
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="#"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Автомобили</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <div class="navbar-collapse navbar-top-collapse">
-                                <ul id="menu-top-menu" class="nav navbar-nav">
-                                    <li id="menu-item-601" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-601"><a
-                                            title="Легковые авто" href="#">Легковые авто
-                                        </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Запчасти</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Акссесуары</a></li>
-                </ul>
-                <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
-                    <li class="nav-item"><a class="nav-link" href="#">Вход</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Регистрация</a></li>
-                </ul>
-                <ul class="navbar-nav d-lg-none">
-                    <li class="nav-item-divider"></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Вход</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Регистрация</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <main id="main" class="site-main main">
+{% block content %}
 
         <section class="hero">
             <div class="container"><img src="https://themes.getbootstrap.com/wp-content/themes/bootstrap-marketplace/assets/images/elements/bootstrap-stack.png"
                     srcset="https://themes.getbootstrap.com/wp-content/themes/bootstrap-marketplace/assets/images/elements/bootstrap-stack.png 1x, https://themes.getbootstrap.com/wp-content/themes/bootstrap-marketplace/assets/images/elements/bootstrap-stack@2x.png 2x">
                 <h1 class="display-1 text-bold">Продай свой авто</h1>
-                <h5 class="text-gray-soft text-regular">Покупать, продовать легко. Если это Avtoroom.ru</h5>
+                <h5 class="text-gray-soft text-regular">Покупать, продовать легко. Если это AVTOROOM.RU</h5>
                 <a class="button button-brand btn-lg mb-5 mb-lg-2" href="#">Почему с нами продавать легко?</a>
             </div>
         </section>
@@ -171,8 +107,7 @@
                                         <p class="theme-card__info">
                                         </p>
                                         <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
+                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Пробег: 197 000 км.</a></li>
                                         </ul>
                                         <p></p>
                                     </div>
@@ -1022,70 +957,4 @@
                 </div>
             </div>
         </section>
-
-    </main>
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__item">
-                    <form action="//getbootstrap.us13.list-manage.com/subscribe/post?u=e3428dd6b8fda73bc5ba8b6e6&amp;id=198881a019" method="post"
-                        id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
-                        <div class="d-md-flex justify-content-between align-items-center">
-                            <div class="form-group">
-                                <h5 class="mb-1">Подписаться на новые объявления!</h5>
-                                <div class="form-text mt-0">Получайте информацию о новых объявлениях, сразу же после их публикации.</div>
-                            </div>
-                            <div id="signup_footer" class="d-flex align-items-start">
-                                <div class="form-group w-100 mr-2">
-                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                            name="b_e3428dd6b8fda73bc5ba8b6e6_198881a019" tabindex="-1" value=""></div>
-                                    <input id="mce-EMAIL" class="footer__email-input form-control form-control--muted" name="EMAIL" type="email" aria-describedby="footerEmail"
-                                        placeholder="Ваша почта">
-                                </div>
-                                <input class="btn btn-brand" type="submit" value="Подписаться" name="subscibe" id="mc-embedded-subscribe">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="footer__item d-lg-flex justify-content-lg-between align-items-lg-center">
-                    <ul id="menu-footer" class="nav sub-nav footer__sub-nav">
-                        <li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194"><a
-                                title="Help Center" href="#">Помощь</a></li>
-                        <li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a
-                                title="Terms of Service" href="#">Условия использования</a></li>
-                        <li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a
-                                title="Licenses" href="#">Лицензия</a></li>
-                    </ul>
-                    <p class="hidden-sm-down d-none d-lg-block">Нашли ошибку? Пожалуйста, свяжитесь с нами <a href="root@root.ru">по
-                            почте
-                        </a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--[if lte IE 8]>
-	<style>
-		.attachment:focus {
-			outline: #1e8cbe solid;
-		}
-		.selected.attachment {
-			outline: #1e8cbe solid;
-		}
-	</style>
-    <![endif]-->
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+{% endblock %}
