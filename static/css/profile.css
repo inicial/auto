@@ -129,19 +129,6 @@ textarea:focus {
   border: 1px solid rgba(249, 249, 249, 1);
 }
 
-.container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 5%;
-}
-
-@media (min-width: 1160px) {
-  .container {
-    padding: 0;
-    width: 90%;
-  }
-}
-
 .container-divider {
   border-top: 1px solid #ddd;
   margin-bottom: 20px;
