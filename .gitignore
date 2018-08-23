@@ -1,2 +1,4 @@
 *.sqlite3
 *.cpython-37.pyc
+/.idea/
+/.vscode/
