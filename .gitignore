@@ -2,3 +2,4 @@
 *.cpython-37.pyc
 /.idea/
 /.vscode/
+__pycache__
