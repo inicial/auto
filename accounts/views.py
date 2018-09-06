@@ -1,20 +1,20 @@
 from django.shortcuts import render
-from django.shortcuts import redirect
-from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 
+
 @login_required(login_url='/accounts/login/')
 def index(request):
-    return render(request, 'accounts\index.html')
+    return render(request, 'accounts/index.html')
 
 
 def login_view(request):
     if not request.user.is_authenticated:
-        return render(request, 'accounts\login.html')
+        return render(request, 'accounts/login.html')
     else:
         return HttpResponseRedirect("/accounts/")
+
 
 def auth(request):
     if request.method == "POST":
@@ -27,14 +27,17 @@ def auth(request):
             login(request, user)
     return HttpResponseRedirect("/accounts/")
 
+
 def logout_view(request):
     logout(request)
     if not request.user.is_authenticated:
         return HttpResponseRedirect("/")
 
+
 def registration(request):
-    return render(request, r'accounts\registration.html')
+    return render(request, r'accounts/registration.html')
+
 
 @login_required(login_url='/accounts/login/')
 def profile(request):
-    return render(request, 'accounts\index.html')
+    return render(request, 'accounts/index.html')

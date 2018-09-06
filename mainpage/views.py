@@ -6,4 +6,4 @@ from django.conf import settings
 
 
 def index(request):
-    return render(request, 'mainpage\index.html')
+    return render(request, 'mainpage/index.html')

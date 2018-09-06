@@ -31,15 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'mainpage',
+    'ad_avto',
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainpage',    
-    'ad_avto',
-    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -54,10 +54,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'blob.urls'
 
+# SETTINGS_PATH = os.path.normpath(os.path.dirname(__file__))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['Templates/'],
+        'DIRS': [os.path.join(BASE_DIR, 'Templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
