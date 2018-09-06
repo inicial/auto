@@ -2,7 +2,6 @@
 *.pyc
 /.idea/
 /.vscode/
-__pycache__
 
 # Django stuff:
 *.log
