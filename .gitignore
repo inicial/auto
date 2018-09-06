@@ -1,5 +1,5 @@
 *.sqlite3
-*.cpython-37.pyc
+*.pyc
 /.idea/
 /.vscode/
 __pycache__
