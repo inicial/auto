@@ -7,5 +7,5 @@ from ad_avto.models import Ad
 
 
 def indexView(request):
-    ad = Ad.objects.all()[:3]
+    ad = Ad.objects.filter(status=True)[:3]
     return render(request, 'mainpage/index.html', {"ad": ad})
