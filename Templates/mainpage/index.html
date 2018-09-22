@@ -20,6 +20,7 @@
                         </div>
                     </div>
                     <ul class="row">
+                        {% for ads in ad %}
                         <li class="col-md-4">
                             <div class="theme-card">
                                 <div class="theme-card__body">
@@ -31,18 +32,19 @@
                                     <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1468">Подробнее</a>
                                 </div>
                                 <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/dashboard/">Audi
-                                            100 1996 г.</a>
+
+                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/dashboard/">{{ ads.title }}</a>
                                         <p class="theme-card__info">
                                         </p>
                                         <ul class="prod_cats_list">
-                                            <li><a href="#">Пробег: 235 481 км.</a></li>
+                                            <li><a href="#">Пробег: {{ ads.mileage }} км.</a></li>
                                         </ul>
                                         <p></p>
                                     </div>
+
                                     <div class="theme-card__footer__item">
                                         <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol"></span>170 000</span>р.</p>
+                                                    class="woocommerce-Price-currencySymbol"></span>{{ ads.cost }}</span>р.</p>
 
                                         <ul class="rating">
                                             <li class="rating__item "></li>
@@ -55,77 +57,78 @@
                                 </div>
                             </div>
                         </li>
+                        {% endfor %}
 
-                        <li class="col-md-4 col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/application/">
-                                        <img width="400" height="300" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-400x300.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-300x225.png 300w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-1024x768.png 1024w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-1200x900.png 1200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application.png 1440w"
-                                            sizes="(max-width: 400px) 100vw, 400px">
-                                    </a>
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1474">Подробнее</a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/application/">Mercedes-Benz
-                                            E220 2005 г.</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="#">Пробег: 97 000 км.</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol"></span>1 500 000</span>р.</p>
+                        <!--<li class="col-md-4 col-6">-->
+                            <!--<div class="theme-card">-->
+                                <!--<div class="theme-card__body">-->
+                                    <!--<a class="d-block" href="https://themes.getbootstrap.com/product/application/">-->
+                                        <!--<img width="400" height="300" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-400x300.png"-->
+                                            <!--class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-300x225.png 300w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-1024x768.png 1024w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application-1200x900.png 1200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Application.png 1440w"-->
+                                            <!--sizes="(max-width: 400px) 100vw, 400px">-->
+                                    <!--</a>-->
+                                    <!--<a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1474">Подробнее</a>-->
+                                <!--</div>-->
+                                <!--<div class="theme-card__footer">-->
+                                    <!--<div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/application/">Mercedes-Benz-->
+                                            <!--E220 2005 г.</a>-->
+                                        <!--<p class="theme-card__info">-->
+                                        <!--</p>-->
+                                        <!--<ul class="prod_cats_list">-->
+                                            <!--<li><a href="#">Пробег: 97 000 км.</a></li>-->
+                                        <!--</ul>-->
+                                        <!--<p></p>-->
+                                    <!--</div>-->
+                                    <!--<div class="theme-card__footer__item">-->
+                                        <!--<p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span-->
+                                                    <!--class="woocommerce-Price-currencySymbol"></span>1 500 000</span>р.</p>-->
 
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                                        <!--<ul class="rating">-->
+                                            <!--<li class="rating__item "></li>-->
+                                            <!--<li class="rating__item "></li>-->
+                                            <!--<li class="rating__item "></li>-->
+                                            <!--<li class="rating__item "></li>-->
+                                            <!--<li class="rating__item "></li>-->
+                                        <!--</ul>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
 
-                        <li class="col-md-4 col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/marketing/">
-                                        <img width="400" height="300" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-400x300.png" class="theme-card__img wp-post-image"
-                                            alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-300x225.png 300w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-1024x768.png 1024w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-1200x900.png 1200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing.png 1440w"
-                                            sizes="(max-width: 400px) 100vw, 400px">                                        </a>
+                        <!--<li class="col-md-4 col-6">-->
+                            <!--<div class="theme-card">-->
+                                <!--<div class="theme-card__body">-->
+                                    <!--<a class="d-block" href="https://themes.getbootstrap.com/product/marketing/">-->
+                                        <!--<img width="400" height="300" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-400x300.png" class="theme-card__img wp-post-image"-->
+                                            <!--alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-300x225.png 300w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-1024x768.png 1024w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing-1200x900.png 1200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Marketing.png 1440w"-->
+                                            <!--sizes="(max-width: 400px) 100vw, 400px">                                        </a>-->
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1471">Подробнее</a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/marketing/">Marketing</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Пробег: 197 000 км.</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
+                                    <!--<a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1471">Подробнее</a>-->
+                                <!--</div>-->
+                                <!--<div class="theme-card__footer">-->
+                                    <!--<div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/marketing/">Marketing</a>-->
+                                        <!--<p class="theme-card__info">-->
+                                        <!--</p>-->
+                                        <!--<ul class="prod_cats_list">-->
+                                            <!--<li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Пробег: 197 000 км.</a></li>-->
+                                        <!--</ul>-->
+                                        <!--<p></p>-->
+                                    <!--</div>-->
+                                    <!--<div class="theme-card__footer__item">-->
+                                        <!--<p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span-->
+                                                    <!--class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>-->
 
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                                        <!--<ul class="rating">-->
+                                            <!--<li class="rating__item "></li>-->
+                                            <!--<li class="rating__item "></li>-->
+                                            <!--<li class="rating__item "></li>-->
+                                            <!--<li class="rating__item "></li>-->
+                                            <!--<li class="rating__item "></li>-->
+                                        <!--</ul>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
 
 
                     </ul>

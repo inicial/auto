@@ -19,6 +19,7 @@ from django.urls import path, include
 admin.autodiscover()
 
 urlpatterns = [
+    path(r'admin', admin.site.urls),
     path(r'admin/', admin.site.urls),
     path(r'', include('mainpage.urls')),
 ]

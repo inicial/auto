@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-# from .models import Option, Riddle
+from .models import Ad
 
-# admin.site.register(Riddle)
+admin.site.register(Ad)
 # admin.site.register(Option)

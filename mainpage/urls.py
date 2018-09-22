@@ -20,6 +20,6 @@ from . import views
 admin.autodiscover()
 
 urlpatterns = [
-    path(r'', views.index, name='index'),
+    path(r'', views.indexView, name='index'),
     path('accounts/', include('accounts.urls')),
 ]
