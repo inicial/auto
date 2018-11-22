@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Ad
+from .models import Ad, Comments
 
 # admin.site.register(Ad)
 
@@ -18,3 +18,17 @@ class AdminAd(admin.ModelAdmin):
     list_display_links = ('title',)
     # list_editable = ["title"]
     search_fields = ["title", "cost"]
+
+
+@admin.register(Comments)
+class AdminComments(admin.ModelAdmin):
+    """
+    отображение в админке
+    """
+    # какие поля показывать
+    list_display = ["id", "status", "text", "name", "date"]
+    # отсортировать по ID
+    ordering = ["id"]
+    list_display_links = ('name',)
+    # list_editable = ["title"]
+    search_fields = ["text", "name"]

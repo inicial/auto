@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section class="section">
+            <div class="container">
+                <div class="theme-cards-holder">
+                    {% for ads in ad %}
+                     <div>
+                            <h5 class="theme-cards__title">{{ ads.title }} {{ ads.year }} года <b>{{ ads.cost }} р.</b></h5>
+                         <br/>
+                     </div>
+                    <div>
+                        <img width="400" height="300" src="/media/{{ ads.images }}" class="theme-card__img wp-post-image"
+                                            alt="{{ ads.title }} {{ ads.year }} года" srcset="/media/{{ ads.images }}" title="{{ ads.title }} {{ ads.year }} года"
+                                            sizes="(max-width: 400px) 100vw, 400px">
+
+                        <p class="text-gray-soft">{{ ads.desc }}</p>
+                    </div>
+
+                    <div>
+                        <br/>
+                        <h3>Комментарии ({{ comment.count }})</h3>
+                        <hr/>
+                        <div>
+                            {% for comments in comment %}
+                    <div class="col-sm-5">
+<div class="panel panel-default">
+<div class="panel-heading">
+<strong>{{ comments.name }}</strong> <span class="text-muted">{{ comments.date }}</span>
+</div>
+<div class="panel-body">
+{{ comments.text }}
+</div><!-- /panel-body -->
+    <hr/>
+</div><!-- /panel panel-default -->
+</div><!-- /col-sm-5 -->
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+{% endblock %}

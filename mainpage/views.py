@@ -6,6 +6,9 @@ from django.conf import settings
 from ad_avto.models import Ad
 
 
-def indexView(request):
+def index_view(request):
     ad = Ad.objects.filter(status=True)[:3]
-    return render(request, 'mainpage/index.html', {"ad": ad})
+    ad_hot = Ad.objects.filter(status=True)
+    ad_recently = Ad.objects.filter(status=True)
+    return render(request, 'mainpage/index.html', {"ad": ad, "ad_hot": ad_hot, "ad_recently": ad_recently})
+

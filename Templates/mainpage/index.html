@@ -25,15 +25,16 @@
                             <div class="theme-card">
                                 <div class="theme-card__body">
                                     <a class="d-block" href="#">
-                                        <img width="400" height="300" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard-400x300.png" class="theme-card__img wp-post-image"
-                                            alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard-300x225.png 300w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard-1024x768.png 1024w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard-1200x900.png 1200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/BS_Dashboard.png 1440w"
-                                            sizes="(max-width: 400px) 100vw, 400px">                                        </a>
+                                        <img width="400" height="300" src="/media/{{ ads.images }}" class="theme-card__img wp-post-image"
+                                            alt="{{ ads.title }} {{ ads.year }} года" srcset="/media/{{ ads.images }}" title="{{ ads.title }} {{ ads.year }} года"
+                                            sizes="(max-width: 400px) 100vw, 400px">
+                                    </a>
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1468">Подробнее</a>
+                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="#">Подробнее</a>
                                 </div>
                                 <div class="theme-card__footer">
 
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/dashboard/">{{ ads.title }} {{ ads.year }} года</a>
+                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="#">{{ ads.title }} {{ ads.year }} года</a>
                                         <p class="theme-card__info">
                                         </p>
                                         <ul class="prod_cats_list">
@@ -142,30 +143,29 @@
                             все</a>
                     </div>
                     <ul class="row">
+                        {% for ads_recently in ad_recently %}
                         <li class="col-6">
                             <div class="theme-card">
                                 <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/07/cover-600x450.jpg" class="theme-card__img wp-post-image"
-                                            alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/07/cover-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/cover-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/cover-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/cover-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/cover-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/cover.jpg 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
+                                    <a class="d-block" href="#">
+                                        <img width="600" height="450" src="/media/{{ ads_recently.images }}" class="theme-card__img wp-post-image"
+                                            alt="" srcset="/media/{{ ads_recently.images }}"
+                                            sizes="(max-width: 600px) 100vw, 600px"></a>
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=7340">Подробнее</a>
+                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="#">Подробнее</a>
                                 </div>
                                 <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/">Space
-                                            – Multipurpose Responsive Template</a>
+                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="#">{{ ads_recently.title }} {{ ads_recently.year }} года</a>
                                         <p class="theme-card__info">
                                         </p>
                                         <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
+                                            <li><a href="#">Пробег: {{ ads_recently.mileage }} км.</a></li>
                                         </ul>
                                         <p></p>
                                     </div>
                                     <div class="theme-card__footer__item">
                                         <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
+                                                    class="woocommerce-Price-currencySymbol"></span>{{ ads_recently.cost }}</span> р.</p>
                                         <ul class="rating">
                                             <li class="rating__item rating__item--active"></li>
                                             <li class="rating__item rating__item--active"></li>
@@ -177,41 +177,42 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/sparrow-simple-seamless-alive/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-600x450.jpg"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1.jpg 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
+                        {% endfor %}
+                        <!--<li class="col-6">-->
+                            <!--<div class="theme-card">-->
+                                <!--<div class="theme-card__body">-->
+                                    <!--<a class="d-block" href="https://themes.getbootstrap.com/product/sparrow-simple-seamless-alive/">-->
+                                        <!--<img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-600x450.jpg"-->
+                                            <!--class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/twbs-sparrow-featured-image-1.jpg 1200w"-->
+                                            <!--sizes="(max-width: 600px) 100vw, 600px">                                        </a>-->
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=7284">Подробнее</a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/sparrow-simple-seamless-alive/">Sparrow
-                                            – Simple. Seamless. Alive!</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>59.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                                    <!--<a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=7284">Подробнее</a>-->
+                                <!--</div>-->
+                                <!--<div class="theme-card__footer">-->
+                                    <!--<div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/sparrow-simple-seamless-alive/">Sparrow-->
+                                            <!--– Simple. Seamless. Alive!</a>-->
+                                        <!--<p class="theme-card__info">-->
+                                        <!--</p>-->
+                                        <!--<ul class="prod_cats_list">-->
+                                            <!--<li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing-->
+                                                    <!--&amp; Corporate</a></li>-->
+                                        <!--</ul>-->
+                                        <!--<p></p>-->
+                                    <!--</div>-->
+                                    <!--<div class="theme-card__footer__item">-->
+                                        <!--<p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span-->
+                                                    <!--class="woocommerce-Price-currencySymbol">$</span>59.00</span></p>-->
+                                        <!--<ul class="rating">-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                        <!--</ul>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
                     </ul>
                     <a class="btn btn-brand btn-block d-md-none" href="https://themes.getbootstrap.com/shop/?orderby=date">View
                         all latest themes</a>
@@ -227,209 +228,36 @@
                         <!-- <a class="theme-cards__heading__button btn btn-outline-brand btn-sm" href="https://themes.getbootstrap.com/shop/?orderby=popularity">View all</a> -->
                     </div>
                     <ul class="row">
+                        {% for ad_hots in ad_hot %}
                         <li class="col-6">
                             <div class="theme-card">
                                 <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/beagle-responsive-admin-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/beagle-600x450.png" class="theme-card__img wp-post-image"
-                                            alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/beagle-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/beagle-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/beagle-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/beagle-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/beagle-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/beagle.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1696">Подробнее</a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/beagle-responsive-admin-template/">Beagle
-                                            – Responsive Admin Template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/admin-dashboard/">Admin
-                                                    &amp; Dashboard</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-600x450.jpg"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot.jpg 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=4231">Подробнее</a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/">Front
-                                            – Multipurpose Responsive Template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>59.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/hyper-responsive-admin-dashboard-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/07/Hyper-preview-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/07/Hyper-preview-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/Hyper-preview-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/Hyper-preview-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/Hyper-preview-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/Hyper-preview-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/Hyper-preview.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=6743">Подробнее</a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/hyper-responsive-admin-dashboard-template/">Hyper
-                                            – Responsive Admin &amp; Dashboard Template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/admin-dashboard/">Admin
-                                                    &amp; Dashboard</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/dashkit-admin-dashboard-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/06/Dashkit-Preview-600x450.jpg"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/06/Dashkit-Preview-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/Dashkit-Preview-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/Dashkit-Preview-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/Dashkit-Preview-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/Dashkit-Preview-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/Dashkit-Preview.jpg 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=6063">Подробнее</a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/dashkit-admin-dashboard-template/">Dashkit&nbsp;–
-                                            Admin &amp; Dashboard Template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/admin-dashboard/">Admin
-                                                    &amp; Dashboard</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/material-kit-pro/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_mkp_thumbnail-1-600x450.jpg"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_mkp_thumbnail-1-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_mkp_thumbnail-1-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_mkp_thumbnail-1-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_mkp_thumbnail-1-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_mkp_thumbnail-1-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_mkp_thumbnail-1.jpg 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1714">Live
-                                        preview
+                                    <a class="d-block" href="{% url 'detail' ad_hots.id %}">
+                                        {% if ad_hots.images %}
+                                        <img width="600" height="450" src="/media/{{ ad_hots.images }}" class="theme-card__img wp-post-image"
+                                            alt="" srcset="/media/{{ ad_hots.images }}"
+                                            sizes="(max-width: 600px) 100vw, 600px">
+                                        {% else %}
+                                        <img width="600" height="450" src="/media/media/no_photo-500x500.png" class="theme-card__img wp-post-image"
+                                            alt="" srcset="media/media/no_photo-500x500.png 600vw"
+                                            sizes="(max-width: 600px) 100vw, 600px">
+                                        {% endif%}
                                     </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/material-kit-pro/">Material
-                                            Kit PRO – Bootstrap 4 Material Design UI</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>79.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/looper-responsive-admin-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/04/Screen-Shot-2018-05-27-at-20.52.23-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/04/Screen-Shot-2018-05-27-at-20.52.23-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/Screen-Shot-2018-05-27-at-20.52.23-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/Screen-Shot-2018-05-27-at-20.52.23-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/Screen-Shot-2018-05-27-at-20.52.23-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/Screen-Shot-2018-05-27-at-20.52.23-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/Screen-Shot-2018-05-27-at-20.52.23.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=3921">Live
-                                        preview
-                                    </a>
+                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="/ad/{{ ad_hots.id }}/">Подробнее</a>
                                 </div>
                                 <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/looper-responsive-admin-template/">Looper
-                                            – Responsive Admin Template</a>
+                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="/ad/{{ ad_hots.id }}/">{{ ad_hots.title }} {{ ad_hots.year }} года</a>
                                         <p class="theme-card__info">
                                         </p>
                                         <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/admin-dashboard/">Admin
-                                                    &amp; Dashboard</a></li>
+                                            <li><a href="#">Пробег: {{ ad_hots.mileage }} км.</a></li>
                                         </ul>
                                         <p></p>
                                     </div>
                                     <div class="theme-card__footer__item">
                                         <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
+                                                    class="woocommerce-Price-currencySymbol"></span>{{ ad_hots.cost }}</span> р.</p>
                                         <ul class="rating">
                                             <li class="rating__item rating__item--active"></li>
                                             <li class="rating__item rating__item--active"></li>
@@ -440,522 +268,44 @@
                                     </div>
                                 </div>
                             </div>
+                        {% endfor %}
                         </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/go-multipurpose-landing-page-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/07/thumb-4-600x450.png" class="theme-card__img wp-post-image"
-                                            alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/07/thumb-4-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/thumb-4-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/thumb-4-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/thumb-4-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/thumb-4-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/07/thumb-4.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
+                        <!--<li class="col-6">-->
+                            <!--<div class="theme-card">-->
+                                <!--<div class="theme-card__body">-->
+                                    <!--<a class="d-block" href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/">-->
+                                        <!--<img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-600x450.jpg"-->
+                                            <!--class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/front-preview-screenshot.jpg 1200w"-->
+                                            <!--sizes="(max-width: 600px) 100vw, 600px">                                        </a>-->
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=6122">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/go-multipurpose-landing-page-template/">GO
-                                            – Multipurpose Template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/pipeline-project-management-application/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-28-at-09.45.03-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-28-at-09.45.03-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-28-at-09.45.03-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-28-at-09.45.03-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-28-at-09.45.03-1200x900.png 1200w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-28-at-09.45.03-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-28-at-09.45.03-400x300.png 400w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
+                                    <!--<a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=4231">Подробнее</a>-->
+                                <!--</div>-->
+                                <!--<div class="theme-card__footer">-->
+                                    <!--<div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/">Front-->
+                                            <!--– Multipurpose Responsive Template</a>-->
+                                        <!--<p class="theme-card__info">-->
+                                        <!--</p>-->
+                                        <!--<ul class="prod_cats_list">-->
+                                            <!--<li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing-->
+                                                    <!--&amp; Corporate</a></li>-->
+                                        <!--</ul>-->
+                                        <!--<p></p>-->
+                                    <!--</div>-->
+                                    <!--<div class="theme-card__footer__item">-->
+                                        <!--<p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span-->
+                                                    <!--class="woocommerce-Price-currencySymbol">$</span>59.00</span></p>-->
+                                        <!--<ul class="rating">-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                            <!--<li class="rating__item rating__item&#45;&#45;active"></li>-->
+                                        <!--</ul>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=4974">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/pipeline-project-management-application/">Pipeline
-                                            Project Management Application</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/application/">Application</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-cover-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-cover-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-cover-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-cover-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-cover-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-cover-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-cover.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=5348">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/">Purpose
-                                            Website UI Kit</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/sell-bootstrap-4-e-commerce-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/06/sell-1200-900-600x450.jpg"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/06/sell-1200-900-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/sell-1200-900-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/sell-1200-900-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/sell-1200-900-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/sell-1200-900-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/sell-1200-900.jpg 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=5824">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/sell-bootstrap-4-e-commerce-template/">Sell
-                                            – Bootstrap 4 e-commerce template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/ecommerce-retail/">E-Commerce
-                                                    &amp; Retail</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/boomerang-bootstrap-4-business-corporate-theme/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/screen-3-600x450.png" class="theme-card__img wp-post-image"
-                                            alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/screen-3-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screen-3-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screen-3-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screen-3-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screen-3-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screen-3.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1679">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/boomerang-bootstrap-4-business-corporate-theme/">Boomerang
-                                            – Bootstrap 4 Business &amp; Corporate Theme</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/wingman-landing-page-app-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/Screen-Shot-2018-07-11-at-12.28.10-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/Screen-Shot-2018-07-11-at-12.28.10-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/Screen-Shot-2018-07-11-at-12.28.10-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/Screen-Shot-2018-07-11-at-12.28.10-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/Screen-Shot-2018-07-11-at-12.28.10-1200x900.png 1200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/Screen-Shot-2018-07-11-at-12.28.10-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/Screen-Shot-2018-07-11-at-12.28.10-400x300.png 400w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1703">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/wingman-landing-page-app-template/">Wingman
-                                            Landing Page &amp; App Template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/milo-magazineblog-theme/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-4-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-4-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-4-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-4-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-4-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-4-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-4.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1671">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/milo-magazineblog-theme/">Milo
-                                            – Magazine/Blog Theme</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/portfolio-blog/">Portfolio
-                                                    &amp; Blog</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/maisonnette-responsive-admin-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/maisonnette-preview2-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/maisonnette-preview2-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/maisonnette-preview2-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/maisonnette-preview2-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/maisonnette-preview2-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/maisonnette-preview2-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/maisonnette-preview2.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1692">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/maisonnette-responsive-admin-template/">Maisonnette
-                                            – Responsive Admin Template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/admin-dashboard/">Admin
-                                                    &amp; Dashboard</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/now-ui-kit-pro/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_nukp_thumbnail-1-600x450.jpg"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_nukp_thumbnail-1-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_nukp_thumbnail-1-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_nukp_thumbnail-1-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_nukp_thumbnail-1-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_nukp_thumbnail-1-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/bb_nukp_thumbnail-1.jpg 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1719">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/now-ui-kit-pro/">Now
-                                            UI Kit PRO – Premium Bootstrap 4 Web Kit</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/portfolio-blog/">Portfolio
-                                                    &amp; Blog</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>69.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/replacer-2/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/thumb-1-600x450.jpg" class="theme-card__img wp-post-image"
-                                            alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/thumb-1-600x450.jpg 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/thumb-1-800x600.jpg 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/thumb-1-768x576.jpg 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/thumb-1-200x150.jpg 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/thumb-1-400x300.jpg 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/thumb-1.jpg 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1745">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/replacer-2/">Replacer</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                            <li class="rating__item rating__item--active"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/robust-ui-kit-dashboard-landing/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/06/bootstrap-themes-2-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/06/bootstrap-themes-2-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/bootstrap-themes-2-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/bootstrap-themes-2-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/bootstrap-themes-2-1200x900.png 1200w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/bootstrap-themes-2-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/bootstrap-themes-2-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/06/bootstrap-themes-2.png 1600w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=5462">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/robust-ui-kit-dashboard-landing/">Robust
-                                            UI Kit – Dashboard &amp; Landing</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/admin-dashboard/">Admin
-                                                    &amp; Dashboard</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/touche-cafe-restaurant-theme/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot_1200x900-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot_1200x900-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot_1200x900-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot_1200x900-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot_1200x900-1200x900.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1651">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/touche-cafe-restaurant-theme/">Touche
-                                            – Cafe &amp; Restaurant Theme</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/specialty/">Specialty</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/spark-responsive-admin-template/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-5-600x450.png"
-                                            class="theme-card__img wp-post-image" alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-5-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-5-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-5-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-5-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-5-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/02/screenshot-1200x900-5.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=1666">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/spark-responsive-admin-template/">Spark
-                                            – Responsive Admin Template</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/admin-dashboard/">Admin
-                                                    &amp; Dashboard</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-6">
-                            <div class="theme-card">
-                                <div class="theme-card__body">
-                                    <a class="d-block" href="https://themes.getbootstrap.com/product/incline-landing-page-set/">
-                                        <img width="600" height="450" src="https://themes.getbootstrap.com/wp-content/uploads/2018/04/screenshot-2-600x450.png" class="theme-card__img wp-post-image"
-                                            alt="" srcset="https://themes.getbootstrap.com/wp-content/uploads/2018/04/screenshot-2-600x450.png 600w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/screenshot-2-800x600.png 800w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/screenshot-2-768x576.png 768w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/screenshot-2-200x150.png 200w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/screenshot-2-400x300.png 400w, https://themes.getbootstrap.com/wp-content/uploads/2018/04/screenshot-2.png 1200w"
-                                            sizes="(max-width: 600px) 100vw, 600px">                                        </a>
-
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="https://themes.getbootstrap.com/preview/?theme_id=3569">Live
-                                        preview
-                                    </a>
-                                </div>
-                                <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="https://themes.getbootstrap.com/product/incline-landing-page-set/">Incline
-                                            – Landing Page Set</a>
-                                        <p class="theme-card__info">
-                                        </p>
-                                        <ul class="prod_cats_list">
-                                            <li><a href="https://themes.getbootstrap.com/product-category/landing-corporate/">Landing
-                                                    &amp; Corporate</a></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                    <div class="theme-card__footer__item">
-                                        <p class="theme-card__price"><span class="woocommerce-Price-amount amount"><span
-                                                    class="woocommerce-Price-currencySymbol">$</span>49.00</span></p>
-                                        <ul class="rating">
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                            <li class="rating__item "></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>
