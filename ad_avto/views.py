@@ -9,3 +9,8 @@ def detail(request, ad_id):
     ad = Ad.objects.filter(id=ad_id)
     comments = Comments.objects.filter(adId=ad_id, status=True)
     return render(request, 'ad/detail.html', {"ad": ad, "comment": comments})
+
+
+def ad_list(request):
+    ad_list = Ad.objects.order_by('date').all()
+    return render(request, 'ad/adlist.html', {"list": ad_list})

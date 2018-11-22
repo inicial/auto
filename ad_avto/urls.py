@@ -22,4 +22,5 @@ admin.autodiscover()
 
 urlpatterns = [
     path(r'<ad_id>', views.detail, name='detail'),
+    path(r'list/', views.ad_list, name='ad_list'),
 ]

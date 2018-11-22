@@ -12,7 +12,7 @@ class AdminAd(admin.ModelAdmin):
     отображение в админке
     """
     # какие поля показывать
-    list_display = ["id", "status", "title", "cost", "year"]
+    list_display = ["id", "title", "cost", "year", "date", "status"]
     # отсортировать по ID
     ordering = ["id"]
     list_display_links = ('title',)
@@ -26,9 +26,9 @@ class AdminComments(admin.ModelAdmin):
     отображение в админке
     """
     # какие поля показывать
-    list_display = ["id", "status", "text", "name", "date"]
+    list_display = ["id", "name", "date", "status"]
     # отсортировать по ID
     ordering = ["id"]
     list_display_links = ('name',)
     # list_editable = ["title"]
-    search_fields = ["text", "name"]
+    search_fields = ["text", "name", "desc"]

@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="col-12">
+            <ul>
+                {% for item in list %}
+                <li>
+                    <p><a href="{% url 'detail' item.id %}">{{ item.title }} {{ item.year }} года {{ item.cost }} р.</a> </p>
+                    <p>
+                        <a href="{% url 'detail' item.id %}">
+                    {% if item.images %}
+                        <img src="/media/{{ item.images }}" width="100" height="100">
+                    {% else %}
+                        <img src="/media/media/no_photo-500x500.png" width="100" height="100">
+                    {% endif %}
+                        </a>
+                    </p>
+                    <p>{{ item.desc }}</p>
+                    <hr/>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

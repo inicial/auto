@@ -24,21 +24,27 @@
                         <li class="col-md-4">
                             <div class="theme-card">
                                 <div class="theme-card__body">
-                                    <a class="d-block" href="#">
-                                        <img width="400" height="300" src="/media/{{ ads.images }}" class="theme-card__img wp-post-image"
-                                            alt="{{ ads.title }} {{ ads.year }} года" srcset="/media/{{ ads.images }}" title="{{ ads.title }} {{ ads.year }} года"
-                                            sizes="(max-width: 400px) 100vw, 400px">
+                                    <a class="d-block" href="{% url 'detail' ads.id %}">
+                                        {% if ads.images %}
+                                        <img width="600" height="450" src="media/{{ ads.images }}" class="theme-card__img wp-post-image"
+                                            alt="" srcset="/media/{{ ads.images }}"
+                                            sizes="(max-width: 600px) 100vw, 600px">
+                                        {% else %}
+                                        <img width="600" height="450" src="/media/media/no_photo-500x500.png" class="theme-card__img wp-post-image"
+                                            alt="" srcset="media/media/no_photo-500x500.png 600vw"
+                                            sizes="(max-width: 600px) 100vw, 600px">
+                                        {% endif %}
                                     </a>
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="#">Подробнее</a>
+                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="{% url 'detail' ads.id %}">Подробнее</a>
                                 </div>
                                 <div class="theme-card__footer">
 
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="#">{{ ads.title }} {{ ads.year }} года</a>
+                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="{% url 'detail' ads.id %}">{{ ads.title }} {{ ads.year }} года</a>
                                         <p class="theme-card__info">
                                         </p>
                                         <ul class="prod_cats_list">
-                                            <li><a href="#">Пробег: {{ ads.mileage }} км.</a></li>
+                                            <li><a href="{% url 'detail' ads.id %}">Пробег: {{ ads.mileage }} км.</a></li>
                                         </ul>
                                         <p></p>
                                     </div>
@@ -139,7 +145,7 @@
                         <div>
                             <h5 class="theme-cards__title">Недавно добавленные</h5>
                             <p class="text-gray-soft">Объявления добавленные за последние сутки.</p>
-                        </div><a class="theme-cards__heading__button btn btn-outline-brand btn-sm" href="https://themes.getbootstrap.com/shop/?orderby=date">Посмотреть
+                        </div><a class="theme-cards__heading__button btn btn-outline-brand btn-sm" href="{% url 'ad_list' %}">Посмотреть
                             все</a>
                     </div>
                     <ul class="row">
@@ -147,19 +153,26 @@
                         <li class="col-6">
                             <div class="theme-card">
                                 <div class="theme-card__body">
-                                    <a class="d-block" href="#">
-                                        <img width="600" height="450" src="/media/{{ ads_recently.images }}" class="theme-card__img wp-post-image"
+                                    <a class="d-block" href="{% url 'detail' ads_recently.id %}">
+                                        {% if ads_recently.images %}
+                                        <img width="600" height="450" src="media/{{ ads_recently.images }}" class="theme-card__img wp-post-image"
                                             alt="" srcset="/media/{{ ads_recently.images }}"
-                                            sizes="(max-width: 600px) 100vw, 600px"></a>
+                                            sizes="(max-width: 600px) 100vw, 600px">
+                                        {% else %}
+                                        <img width="600" height="450" src="/media/media/no_photo-500x500.png" class="theme-card__img wp-post-image"
+                                            alt="" srcset="media/media/no_photo-500x500.png 600vw"
+                                            sizes="(max-width: 600px) 100vw, 600px">
+                                        {% endif %}
+                                    </a>
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="#">Подробнее</a>
+                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="{% url 'detail' ads_recently.id %}">Подробнее</a>
                                 </div>
                                 <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="#">{{ ads_recently.title }} {{ ads_recently.year }} года</a>
+                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="{% url 'detail' ads_recently.id %}">{{ ads_recently.title }} {{ ads_recently.year }} года</a>
                                         <p class="theme-card__info">
                                         </p>
                                         <ul class="prod_cats_list">
-                                            <li><a href="#">Пробег: {{ ads_recently.mileage }} км.</a></li>
+                                            <li><a href="{% url 'detail' ads_recently.id %}">Пробег: {{ ads_recently.mileage }} км.</a></li>
                                         </ul>
                                         <p></p>
                                     </div>
@@ -234,24 +247,24 @@
                                 <div class="theme-card__body">
                                     <a class="d-block" href="{% url 'detail' ad_hots.id %}">
                                         {% if ad_hots.images %}
-                                        <img width="600" height="450" src="/media/{{ ad_hots.images }}" class="theme-card__img wp-post-image"
+                                        <img width="600" height="450" src="media/{{ ad_hots.images }}" class="theme-card__img wp-post-image"
                                             alt="" srcset="/media/{{ ad_hots.images }}"
                                             sizes="(max-width: 600px) 100vw, 600px">
                                         {% else %}
                                         <img width="600" height="450" src="/media/media/no_photo-500x500.png" class="theme-card__img wp-post-image"
                                             alt="" srcset="media/media/no_photo-500x500.png 600vw"
                                             sizes="(max-width: 600px) 100vw, 600px">
-                                        {% endif%}
+                                        {% endif %}
                                     </a>
 
-                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="/ad/{{ ad_hots.id }}/">Подробнее</a>
+                                    <a class="theme-card__body__overlay btn btn-brand btn-sm" target="_blank" href="{% url 'detail' ad_hots.id %}">Подробнее</a>
                                 </div>
                                 <div class="theme-card__footer">
-                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="/ad/{{ ad_hots.id }}/">{{ ad_hots.title }} {{ ad_hots.year }} года</a>
+                                    <div class="theme-card__footer__item"><a class="theme-card__title mr-1" href="{% url 'detail' ad_hots.id %}">{{ ad_hots.title }} {{ ad_hots.year }} года</a>
                                         <p class="theme-card__info">
                                         </p>
                                         <ul class="prod_cats_list">
-                                            <li><a href="#">Пробег: {{ ad_hots.mileage }} км.</a></li>
+                                            <li><a href="{% url 'detail' ad_hots.id %}">Пробег: {{ ad_hots.mileage }} км.</a></li>
                                         </ul>
                                         <p></p>
                                     </div>
